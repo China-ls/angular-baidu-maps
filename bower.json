@@ -1,0 +1,15 @@
+{
+  "name": "angular-baidu-maps",
+  "description": "百度地图AngularJs指令示例",
+  "version": "0.0.1",
+  "homepage": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "angular-loader": "~1.5.0",
+    "angular-mocks": "~1.5.0",
+    "jquery": "~2.1.3"
+  }
+}

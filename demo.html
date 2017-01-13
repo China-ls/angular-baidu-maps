@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>百度地图AngularJs指令示例</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="demo.css" rel="stylesheet">
+</head>
+<body ng-controller="DemoCtrl">
+
+<div class="header">
+    <h4 class="text-center">百度地图AngularJs指令示例</h4>
+</div>
+
+<div class="console-wrapper">
+    <h5 class="text-center">日志输出栏目</h5>
+    <div id="console"></div>
+</div>
+
+<div class="map-wrapper">
+
+    <div>
+        <div id="map" style="height:500px;"
+             ui-baidu-map="myMap"
+             map-event="{'map-click': 'onMapClick($event, $params)', 'map-loaded': 'onMapLoaded($event, $params)'}"
+             map-options="mapOpts">
+        </div>
+
+
+        <div class="hide">
+
+            <div ui-baidu-map-info-window="myInfoWindow"
+                 info-window-event="{'close' : 'onInfoWindowClose($event, $params)','clickclose' : 'onInfoWindowClickClose($event, $params)'}">
+                <div class="m-b-sm">标注</div>
+                <form role="form">
+                    <div class="form-group">
+                        <label for="lat">Lat:</label>
+                        <input id="lat" ng-model="currentMarker.point.lat" class="form-control input-sm w-sm m-l-lg">
+                    </div>
+                    <div class="form-group">
+                        <label for="lng">Lng:</label>
+                        <input id="lng" ng-model="currentMarker.point.lng" class="form-control input-sm w-sm m-l-lg">
+                    </div>
+                    <a class="btn btn-success btn-sm m-l-lg m-b-sm" ng-click="onInfoWindowClick(currentMarker)">点我试试</a>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="dist/angularjs-baidu-maps.min.js"></script>
+<script src="demo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+html {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #0075c7;
+    height: 40px;
+    padding-top:10px;
+    color: #ffffff;
+}
+
+h4 {
+    margin-top: 0;
+}
+
+.console-wrapper {
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+#console {
+    max-height: 600px;
+    z-index: 2;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.map-wrapper {
+    z-index: 1;
+    position: relative;
+    padding-left: 200px;
+    padding-right: 5px;
+}
