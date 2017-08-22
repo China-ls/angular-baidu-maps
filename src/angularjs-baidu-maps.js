@@ -1,6 +1,6 @@
 'use strict';
 
-var loadBaiduPromise;
+var loadBaiduPromise, isLoaded;
 var loadBaiduMaps = function ($q, apiKey, version) {
     if (loadBaiduPromise) {
         return loadBaiduPromise;
@@ -155,8 +155,8 @@ lsBaiduMapModule.value('uiBaiduMapConfig', {})
                         }
 
                         elm.replaceWith('<div></div>');
+                        $compile(elm.contents())(scope);
                         infoWindow.open = function open(overlay) {
-                            $compile(elm.contents())(scope);
                             overlay.openInfoWindow(infoWindow);
                         };
                     };
